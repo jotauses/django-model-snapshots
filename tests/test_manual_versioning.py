@@ -1,7 +1,7 @@
 import pytest
 from django.db import models
-from django_model_versions.mixins import VersionableMixin
-from django_model_versions.context import force_versioning
+from django_model_snapshots.mixins import VersionableMixin
+from django_model_snapshots.context import force_versioning
 
 class ManualVersionModel(VersionableMixin, models.Model):
     name = models.CharField(max_length=100)

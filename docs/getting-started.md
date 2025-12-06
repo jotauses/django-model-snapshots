@@ -10,12 +10,12 @@ pip install django-model-versions
 
 ## Configuration
 
-Add `django_model_versions` to your `INSTALLED_APPS` in `settings.py`:
+Add `django_model_snapshots` to your `INSTALLED_APPS` in `settings.py`:
 
 ```python title="settings.py"
 INSTALLED_APPS = [
     ...
-    'django_model_versions',
+    'django_model_snapshots',
     ...
 ]
 ```
@@ -26,7 +26,7 @@ Inherit from `VersionableMixin` in your model. That's it!
 
 ```python title="models.py"
 from django.db import models
-from django_model_versions import VersionableMixin
+from django_model_snapshots import VersionableMixin
 
 class Product(VersionableMixin, models.Model):
     name = models.CharField(max_length=100)

@@ -5,7 +5,7 @@ from django.contrib.auth.models import AnonymousUser
 from django.db import models
 from django.test import RequestFactory
 
-from django_model_versions.admin import VersionAdminMixin
+from django_model_snapshots.admin import VersionAdminMixin
 
 
 class MockSuperAdmin(admin.ModelAdmin):
@@ -35,10 +35,10 @@ def test_admin_history_view(monkeypatch):
     def mock_get_object_or_404(model, pk):
         return obj
 
-    import django_model_versions.admin
+    import django_model_snapshots.admin
 
     monkeypatch.setattr(
-        django_model_versions.admin, "get_object_or_404", mock_get_object_or_404
+        django_model_snapshots.admin, "get_object_or_404", mock_get_object_or_404
     )
 
     # Manually attach mock history model

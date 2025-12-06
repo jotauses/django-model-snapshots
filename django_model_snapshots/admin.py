@@ -42,7 +42,7 @@ class VersionAdminMixin:
         if extra_context:
             context.update(extra_context)
 
-        return render(request, "admin/django_model_versions/history.html", context)
+        return render(request, "admin/django_model_snapshots/history.html", context)
 
     def get_urls(self) -> List[Any]:
         urls = super().get_urls()

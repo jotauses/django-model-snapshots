@@ -1,14 +1,14 @@
-# 📚 Django Model Versions
+# 📚 Django Model Snapshots
 
 > **Simple, efficient and intuitive version control for your Django models.**
 
-[![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://jotauses.github.io/django-model-versions/)
-[![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/jotauses/django-model-versions)
-[![Coverage](https://img.shields.io/badge/coverage-94%25-success)](https://github.com/jotauses/django-model-versions)
+[![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://jotauses.github.io/django-model-snapshots/)
+[![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/jotauses/django-model-snapshots)
+[![Coverage](https://img.shields.io/badge/coverage-94%25-success)](https://github.com/jotauses/django-model-snapshots)
 [![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12%20|%203.13%20|%203.14-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-4.2%20|%205.0%20|%205.1%20|%205.2-green)](https://www.djangoproject.com/)
 
-**Full Documentation**: [https://jotauses.github.io/django-model-versions/](https://jotauses.github.io/django-model-versions/)
+**Full Documentation**: [https://jotauses.github.io/django-model-snapshots/](https://jotauses.github.io/django-model-snapshots/)
 
 ## 📋 Requirements
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 🌟 Why Django Model Versions?
+## 🌟 Why Django Model Snapshots?
 
 Tracking changes in your database shouldn't be a headache. You need a solution that is:
 
@@ -31,18 +31,18 @@ Tracking changes in your database shouldn't be a headache. You need a solution t
 ### 1. Installation
 
 ```bash
-pip install django-model-versions
+pip install django-model-snapshots
 ```
 
 ### 2. Add to your App
 
-Add `django_model_versions` to your `INSTALLED_APPS`:
+Add `django_model_snapshots` to your `INSTALLED_APPS`:
 
 ```python
 # settings.py
 INSTALLED_APPS = [
     ...
-    'django_model_versions',
+    'django_model_snapshots',
     ...
 ]
 ```
@@ -53,7 +53,7 @@ Inherit from `VersionableMixin` in your model. That's it!
 
 ```python
 from django.db import models
-from django_model_versions import VersionableMixin
+from django_model_snapshots import VersionableMixin
 
 class Product(VersionableMixin, models.Model):
     name = models.CharField(max_length=100)
@@ -120,7 +120,7 @@ class DraftPost(VersionableMixin, models.Model):
 Use the `force_versioning` context manager to create a version explicitly, even if `VERSIONING_AUTO` is False.
 
 ```python
-from django_model_versions import force_versioning
+from django_model_snapshots import force_versioning
 
 post = DraftPost.objects.create(title="Draft") # No version created
 
@@ -135,7 +135,7 @@ with force_versioning():
 Creating thousands of records? Don't kill your database. Use `bulk_create_history`.
 
 ```python
-from django_model_versions import bulk_create_history
+from django_model_snapshots import bulk_create_history
 
 products = [Product(name=f"Product {i}") for i in range(1000)]
 
@@ -167,7 +167,7 @@ View history directly in the Django Admin.
 
 ```python
 from django.contrib import admin
-from django_model_versions import VersionAdmin
+from django_model_snapshots import VersionAdmin
 from .models import Product
 
 @admin.register(Product)
@@ -188,7 +188,7 @@ We use `pytest` for a robust testing suite.
 pytest
 
 # Run with coverage
-pytest --cov=django_model_versions
+pytest --cov=django_model_snapshots
 ```
 
 ## 🤝 Contributing

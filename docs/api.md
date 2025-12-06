@@ -2,7 +2,7 @@
 
 ## `VersionableMixin`
 
-`django_model_versions.mixins.VersionableMixin`
+`django_model_snapshots.mixins.VersionableMixin`
 
 Mixin to add versioning capabilities to a Django model.
 
@@ -19,7 +19,7 @@ Mixin to add versioning capabilities to a Django model.
 
 ## `HistoryQuerySet`
 
-`django_model_versions.managers.HistoryQuerySet`
+`django_model_snapshots.managers.HistoryQuerySet`
 
 Custom QuerySet for historical models.
 
@@ -45,7 +45,7 @@ Returns the oldest historical record.
 
 ## `force_versioning`
 
-`django_model_versions.context.force_versioning`
+`django_model_snapshots.context.force_versioning`
 
 Context manager to force versioning creation within a block, overriding `VERSIONING_AUTO=False`.
 
@@ -58,7 +58,7 @@ with force_versioning():
 
 ## `bulk_create_history`
 
-`django_model_versions.utils.bulk_create_history`
+`django_model_snapshots.utils.bulk_create_history`
 
 **Signature:** `bulk_create_history(objs: List[Model], history_type: str = "+") -> None`
 
@@ -71,6 +71,6 @@ Efficiently creates history records for a list of objects in a single query.
 
 ## `VersionAdmin`
 
-`django_model_versions.admin.VersionAdmin`
+`django_model_snapshots.admin.VersionAdmin`
 
 ModelAdmin subclass that adds a "History" button to the change view and renders a history list page.

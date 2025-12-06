@@ -2,7 +2,7 @@ SECRET_KEY = "fake-key"
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
-    "django_model_versions",
+    "django_model_snapshots",
     "tests.apps.TestsConfig",
 ]
 DATABASES = {

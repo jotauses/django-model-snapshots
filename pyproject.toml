@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "django-model-versions"
+name = "django-model-snapshots"
 version = "0.1.0"
 description = "A robust, elegant and ultra-performance Django model versioning package for Django 4.x+"
 readme = "README.md"
@@ -41,12 +41,12 @@ test = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/jotauses/django-model-versions"
-"Documentation" = "https://jotauses.github.io/django-model-versions/"
-"Bug Tracker" = "https://github.com/jotauses/django-model-versions/issues"
+"Homepage" = "https://github.com/jotauses/django-model-snapshots"
+"Documentation" = "https://jotauses.github.io/django-model-snapshots/"
+"Bug Tracker" = "https://github.com/jotauses/django-model-snapshots/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["django_model_versions"]
+packages = ["django_model_snapshots"]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "tests.settings"

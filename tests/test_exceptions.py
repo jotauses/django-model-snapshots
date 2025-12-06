@@ -1,6 +1,6 @@
 import pytest
 
-from django_model_versions.mixins import VersionableMixin
+from django_model_snapshots.mixins import VersionableMixin
 from tests.models import BasicModel
 
 

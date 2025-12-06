@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from django_model_versions.utils import bulk_create_history
+from django_model_snapshots.utils import bulk_create_history
 from tests.models import BasicModel
 
 

@@ -1,7 +1,7 @@
 import pytest
 
-from django_model_versions.mixins import VersionableMixin
-from django_model_versions.utils import bulk_create_history
+from django_model_snapshots.mixins import VersionableMixin
+from django_model_snapshots.utils import bulk_create_history
 
 
 @pytest.mark.django_db
@@ -163,7 +163,7 @@ def test_mixin_exception_coverage(monkeypatch):
 
     # Let's mock create_historical_record_model to return a mock object that raises Exception on get_field
 
-    from django_model_versions.core import create_historical_record_model
+    from django_model_snapshots.core import create_historical_record_model
 
     real_create = create_historical_record_model
 
@@ -179,10 +179,10 @@ def test_mixin_exception_coverage(monkeypatch):
         return MockHistoryModel
 
     # We need to patch it in mixins module
-    import django_model_versions.mixins
+    import django_model_snapshots.mixins
 
     monkeypatch.setattr(
-        django_model_versions.mixins, "create_historical_record_model", mock_create
+        django_model_snapshots.mixins, "create_historical_record_model", mock_create
     )
 
     # Trigger
@@ -229,10 +229,10 @@ def test_mixin_exception_manual(monkeypatch):
     def mock_create(model, fields):
         return MockHistoryModel
 
-    import django_model_versions.mixins
+    import django_model_snapshots.mixins
 
     monkeypatch.setattr(
-        django_model_versions.mixins, "create_historical_record_model", mock_create
+        django_model_snapshots.mixins, "create_historical_record_model", mock_create
     )
 
     # Call _finalize_history manually

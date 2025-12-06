@@ -21,7 +21,7 @@ class DraftPost(VersionableMixin, models.Model):
 Use the `force_versioning` context manager to create a version explicitly, even if `VERSIONING_AUTO` is False.
 
 ```python
-from django_model_versions import force_versioning
+from django_model_snapshots import force_versioning
 
 post = DraftPost.objects.create(title="Draft") # No version created
 
@@ -36,7 +36,7 @@ with force_versioning():
 Creating thousands of records? Don't kill your database with N+1 inserts. Use `bulk_create_history`.
 
 ```python
-from django_model_versions import bulk_create_history
+from django_model_snapshots import bulk_create_history
 
 products = [Product(name=f"Product {i}") for i in range(1000)]
 

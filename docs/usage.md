@@ -59,7 +59,7 @@ To view history in the Django Admin, inherit from `VersionAdmin`.
 
 ```python title="admin.py"
 from django.contrib import admin
-from django_model_versions import VersionAdmin
+from django_model_snapshots import VersionAdmin
 from .models import Product
 
 @admin.register(Product)

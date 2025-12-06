@@ -1,6 +1,6 @@
 from django.db import models
 
-from django_model_versions.mixins import VersionableMixin
+from django_model_snapshots.mixins import VersionableMixin
 
 
 class BasicModel(VersionableMixin, models.Model):
