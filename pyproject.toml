@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "django-model-versions"
 version = "0.1.0"
-description = "A robust, elegant and efficient Django model versioning package."
+description = "A robust, elegant and ultra-performance Django model versioning package for Django 4.x+"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
