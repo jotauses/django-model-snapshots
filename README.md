@@ -2,10 +2,18 @@
 
 > **Simple, efficient and intuitive version control for your Django models.**
 
+[![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://jotauses.github.io/django-model-versions/)
 [![Tests](https://img.shields.io/badge/tests-passing-success)](https://github.com/jotauses/django-model-versions)
 [![Coverage](https://img.shields.io/badge/coverage-94%25-success)](https://github.com/jotauses/django-model-versions)
-[![Python](https://img.shields.io/badge/python-3.14-blue)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/django-5.0%2B-green)](https://www.djangoproject.com/)
+[![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12%20|%203.13%20|%203.14-blue)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-4.2%20|%205.0%20|%205.1%20|%205.2-green)](https://www.djangoproject.com/)
+
+**Full Documentation**: [https://jotauses.github.io/django-model-versions/](https://jotauses.github.io/django-model-versions/)
+
+## 📋 Requirements
+
+*   **Python**: 3.10, 3.11, 3.12, 3.13, 3.14
+*   **Django**: 4.2 (LTS), 5.0, 5.1, 5.2
 
 ---
 
